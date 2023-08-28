@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <title>Reward Counter</title>
+</head>
+<body>
+    <h1 id="announcement">Site in Progress</h1>
+    <h1>Coding Quest</h1>
+    <h4 id="point-el">Points:</h4>
+    <h4>Welcome back, Student!</h4>
+        <div id="main-container">
+            <div class="container-list">
+                <h2>Main Quest</h2>
+                <h3 contenteditable="true">Learn Javascript</h3>
+                    <div class="container-quest">
+                        <button id="btn-three-pt">+ 3</button>
+                        <input type="text" class="input-el">
+                    </div>
+                
+                    <div class="container-quest">
+                        <button id="btn-three-pt" >+ 3</button>
+                        <input type="text" class="input-el">
+                    </div>
+                    
+                    <div class="container-quest">
+                        <button id="btn-three-pt">+ 3</button>
+                        <input type="text" class="input-el">
+                    </div>
+                
+            </div>
+
+            <div class="container-list">
+                <h2>Side Quests</h2>
+                <div class="container-quest">
+                    <button id="btn-one-pt">+ 1</button>
+                    <input type="text" class="input-el">
+                </div>
+            
+                <div class="container-quest">
+                    <button id="btn-one-pt">+ 1</button>
+                    <input type="text" class="input-el">
+                </div>
+                
+                <div class="container-quest">
+                    <button id="btn-one-pt">+ 1</button>
+                    <input type="text" class="input-el">
+                </div>
+            </div>
+
+            
+        </div>
+
+    <div class="container-reward">
+        <div class="container-reward-counter">
+            <h1>Reward points</h1>
+            <h4>Click "+5" button when you complete a task!</h4>
+            <h4>Click "+25" button when you complete your main goal!</h4>
+            <h4>Click "claim" button to claim your points for reward!</h4>
+            <div class="btn">
+                <div class="point-btn">
+                    <button>+ 5</button>
+                    <button>+ 25</button>
+                </div>
+                <button id="earn-btn">EARN</button>
+                <button id="claim-btn">CLAIM</button>
+            </div>
+        </div>
+
+        <h1>Rewards</h1>
+        <h2>Reward yourself for a job well done today!</h2>
+        <ul>
+            <li contenteditable="true">5 points: Head out for a walk</li>
+            <li> 10 points: Go to your favorite lunch spot</li>
+            <li>15 points: Take the rest of the day off</li>
+            <li>Main Goal - 40 points: Reward</li>
+        </ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
