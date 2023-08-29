@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*Include the padding and border in an element's total width and height */
     
 }
 body{
@@ -50,6 +50,7 @@ h1{
     align-items: center;
     justify-content: center;
     padding: 25px;
+    height: 150px;
 }
 
 input{
@@ -64,7 +65,7 @@ input{
     flex-direction: column;
     border: 3px solid black;
 }
-.btn{
+.btn, .add-wrapper{
     display: flex;
     align-items: center;
 }
@@ -91,6 +92,9 @@ button:hover{
     color: #bfd7ff;
 }
 
+.add-btn{
+    font-size: 20px;
+}
 .container-reward{
     margin-top: 175px;
     display: flex;
