@@ -6,24 +6,33 @@ let rewardPoint = 0
 
 //ADD Main Quest
 const addMainQbtn = document.querySelector(".add-main-btn");
+const addSideQbtn = document.querySelector(".add-side-btn");
+
+//Grab button points element and store in variable
+const threePt = document.getElementsByClassName("btn-three-pt")
+const onePt = document.querySelectorAll("#btn-one-pt")
+
+
+let ulMainEl = document.querySelector(".ul-main-el");
 
 addMainQbtn.addEventListener("click", function(){
     const myMainQuests = []
     
-    const ulMainEl = document.querySelector(".ul-main-el");
     const inputMainEl = document.querySelector(".input-main-el").value;  
     myMainQuests.push(inputMainEl);
     for(let i = 0; i < myMainQuests.length; i++){
-        // ulEl.innerHTML = "<li>" + myMainQuests[i] + "</li>";
+        // ulMainEl.innerHTML = `
+        //     <li>
+        //      ${myMainQuests[i]}
+        //     </li>`;    
         const mainli = document.createElement("li");
         mainli.textContent = myMainQuests[i];
-        ulMainEl.append(mainli);
+        ulMainEl.append(mainli);    
         
+        createButton(ulMainEl)
     }
 })
-
 //ADD Side Quest
-const addSideQbtn = document.querySelector(".add-side-btn");
 
 addSideQbtn.addEventListener("click", function(){
     const mySideQuests = []
@@ -32,21 +41,41 @@ addSideQbtn.addEventListener("click", function(){
     const inputSideEl = document.querySelector(".input-side-el").value;  
     mySideQuests.push(inputSideEl);
     for(let i = 0; i < mySideQuests.length; i++){
-        // ulEl.innerHTML = "<li>" + myMainQuests[i] + "</li>";
         const sideli = document.createElement("li");
         sideli.textContent = mySideQuests[i];
         ulSideEl.append(sideli);
-        
+        createButton(ulSideEl)
     }
 })
 
+function createButton(ulEl){
+    if(ulMainEl){
+        const buttonThree = document.createElement("button");
+    
+    ulEl.append(buttonThree);  
+    buttonThree.onclick = function(){
+    rewardPoint += 3;
+    pointEl.textContent = "Points: " + rewardPoint; 
+    console.log("button for three points clicked")  
+    }
+    }else if(ulSideEl){
+        const buttonOne = document.createElement("button");
+    ulEl.append(buttonOne);    
+    buttonOne.onclick = function(){
+    rewardPoint += 1;
+    pointEl.textContent = "Points: " + rewardPoint;   
+    console.log("button for one point clicked")  
+    }
+    }
+}
 
 
 
 
-//Grab button points element and store in variable
-const threePt = document.getElementById("btn-three-pt")
-const onePt = document.querySelectorAll("#btn-one-pt")
+
+
+
+
 
 //EARNING POINTS
 //log three Points
@@ -65,4 +94,3 @@ onePt[i].addEventListener("click", function(){
         
 })
 }
-
