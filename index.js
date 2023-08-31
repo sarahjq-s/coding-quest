@@ -10,14 +10,14 @@ const addMainQbtn = document.querySelector(".add-main-btn");
 addMainQbtn.addEventListener("click", function(){
     const myMainQuests = []
     const ulMainEl = document.querySelector(".ul-main-el");
-    const inputMainEl = document.querySelector(".input-main-el").value;
-    myMainQuests.push(inputMainEl);
+    let inputMainEl = document.querySelector(".input-main-el");
+    myMainQuests.push(inputMainEl.value);
 
     for(let i = 0; i < myMainQuests.length; i++){
         const mainLi = document.createElement("li");
         mainLi.textContent = myMainQuests[i];
         ulMainEl.append(mainLi);   
-        ulMainEl.value = ""; 
+        inputMainEl.value = ""; 
         
         mainLi.addEventListener("click", function(){
         mainLi.style.backgroundColor = "#fff3b0";
@@ -37,12 +37,13 @@ const addSideQbtn = document.querySelector(".add-side-btn");
 addSideQbtn.addEventListener("click", function(){
     const mySideQuests = []
     const ulSideEl = document.querySelector(".ul-side-el");
-    const inputSideEl = document.querySelector(".input-side-el").value;  
-    mySideQuests.push(inputSideEl);
+    const inputSideEl = document.querySelector(".input-side-el");  
+    mySideQuests.push(inputSideEl.value);
     for(let i = 0; i < mySideQuests.length; i++){
         const sideLi = document.createElement("li");
         sideLi.textContent = mySideQuests[i];
         ulSideEl.append(sideLi);
+        inputSideEl.value = ""; 
 
         sideLi.addEventListener("click", function(){
         sideLi.style.backgroundColor = "#fff3b0";
