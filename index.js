@@ -11,8 +11,8 @@ addMainQbtn.addEventListener("click", function(){
     const myMainQuests = []
     const ulMainEl = document.querySelector(".ul-main-el");
     let inputMainEl = document.querySelector(".input-main-el");
-    myMainQuests.push(inputMainEl.value);
-
+    myMainQuests.push(inputMainEl.value)
+   
     for(let i = 0; i < myMainQuests.length; i++){
         const mainLi = document.createElement("li");
         mainLi.textContent = myMainQuests[i];
@@ -24,11 +24,9 @@ addMainQbtn.addEventListener("click", function(){
         mainLi.style.setProperty("text-decoration", "line-through")
         rewardPoint += 3;
         pointEl.textContent = "Points: " + rewardPoint;
-        console.log("button for three points clicked");  
-        
-    }) 
-}})
-
+        })
+    }
+})
 
 
 //Side Quest
@@ -50,7 +48,6 @@ addSideQbtn.addEventListener("click", function(){
         sideLi.style.setProperty("text-decoration", "line-through")
         rewardPoint += 1;
         pointEl.textContent = "Points: " + rewardPoint; 
-        console.log("button for one point clicked");  
         }) 
        
     }
